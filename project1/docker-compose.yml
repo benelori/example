@@ -1,0 +1,12 @@
+version: '3.5'
+
+services:
+  project_1:
+    build:
+      context: ./docker
+      dockerfile: Dockerfile
+    working_dir: /project1
+    volumes:
+      - ./:/project1
+    env_file:
+      - .env
